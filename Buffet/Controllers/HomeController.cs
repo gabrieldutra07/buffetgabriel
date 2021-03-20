@@ -36,8 +36,8 @@ namespace Buffet.Controllers
             viewmodel.Titulo = "Título qualquer";
             viewmodel.UsuarioLogado = new Usuario()
             {
-                Nome = "Leonardo",
-                Idade = 34
+                Nome = "Gabriel",
+                Idade = 20
             };
             
             return View(viewmodel);
