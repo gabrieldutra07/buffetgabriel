@@ -13,9 +13,9 @@ namespace Buffet.ViewModels.Home
         
         public ICollection<Cliente> Clientes { get; set; }
 
-        public IndexViewModel(ICollection<Cliente> clientes)
+        public IndexViewModel()
         {
-            Clientes = clientes;
+            Clientes = new List<Cliente>();
         }
     }
     

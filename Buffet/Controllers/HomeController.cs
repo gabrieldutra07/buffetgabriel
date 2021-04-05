@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -45,17 +46,16 @@ namespace Buffet.Controllers
                 Nome = "Gabriel",
                 Idade = 20
             };
-            
-            var clientesDoBanco<ClienteEntity> =
-            _clienteService.ObterClientes();
+
+            var clientesDoBanco = _clienteService.ObterClientes();
             
             foreach (var clienteEntity in clientesDoBanco)
                 viewmodel.Clientes.Add(new Cliente()
                 {
                     
-                    Id = "a",
-                    Nome = "Gabriel"
-                    
+                    Id = clienteEntity.Id.ToString(),
+                    Nome = clienteEntity.Nome
+
                 });
                 
             
